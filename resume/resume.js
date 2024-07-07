@@ -20,6 +20,9 @@ button.addEventListener("click", function (e) {
     links.forEach((link) => {
       link.style.color = "rgb(72, 146, 220)";
     });
+    if(5!==6){
+
+    }
   }
   isDarkMode = !isDarkMode; // Toggle the mode
 });
