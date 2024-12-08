@@ -39,7 +39,7 @@ int main()
 
     // Using Dynamic memory allocation in heap using pointers
     Animal *suresh = new Animal;
-    (*suresh).age = 45;
+    suresh[0].age = 45;
     suresh->age = 50;
     // cout<<(*suresh).age;
     cout << suresh->age; // to access values stored in pointer use -> arrow operator

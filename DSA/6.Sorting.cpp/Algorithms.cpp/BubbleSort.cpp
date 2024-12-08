@@ -1,6 +1,25 @@
 #include <iostream>
 #include <vector>
-using namespace std;               // Stable Sort
+using namespace std;   
+void bubble(vector<int> &arr){
+    int n=arr.size();
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]) swap(arr[j],arr[j+1]);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+}            // Stable Sort
 void BubbleSort(vector<int> &arr)  // Time Complexity : O(N*N)
 {   int n=arr.size();                                // Space Complexity : O(1)
     for (int i = 0; i < n - 1; i++)
@@ -13,10 +32,10 @@ void BubbleSort(vector<int> &arr)  // Time Complexity : O(N*N)
                 flag = true;
                 swap(arr[j], arr[j + 1]);
             }
-            if (flag == false) // If no swaps in a pass then array has been sorted
-            {
-                break;
-            }
+        }
+        if (flag == false) // If no swaps in a pass then array has been sorted
+        {
+            break;
         }
     }
 }

@@ -1,6 +1,19 @@
 #include <iostream>
 #include <vector>
 using namespace std; // Stable Sort
+
+void insertion(vector<int>&nums){
+    int n=nums.size();
+    for(int i=0;i<n;i++){
+        int cur=nums[i];
+        int j=i-1;
+        while(j>=0 and nums[j]>cur){
+            nums[j+1]=nums[j];
+            j--;
+        }
+        nums[j+1]=cur;
+    }
+}
 // Repeatedly take elements from unsorted subarray and insert in sorted subarray at its correct position
 void InsertionSort(vector<int> &arr)
 {
@@ -29,7 +42,7 @@ int main()
     {
         cin >> v[i];
     }
-    InsertionSort(v);
+    insertion(v);
     cout << "Sorted Array is : ";
     for (int i = 0; i < n; i++)
     {
